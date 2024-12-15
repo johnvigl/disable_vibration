@@ -1,0 +1,6 @@
+id=disable_vibration
+name=Disable Vibration for Selected Apps
+version=1.0
+versionCode=1
+author=johnvigl
+description=Disables device's vibration while specific apps are in the foreground. 
