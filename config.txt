@@ -1,0 +1,6 @@
+# List of apps for which vibration should be disabled
+com.facebook.orca
+com.viber.voip
+org.telegram.messenger
+com.revolut.revolut
+
