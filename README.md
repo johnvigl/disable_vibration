@@ -8,7 +8,7 @@ Tested in Android 10
 ## Configuration
 
 1. Edit the configuration file located at:
-   `/data/adb/modules/disable_vibration/config.txt`
+   `/data/adb/modules/disable_vibration/config.txt` after installation or 'config.txt' before installation.
 
 2. Add or remove app package names as needed. Use one app package name per line. Lines starting with `#` are treated as comments.
 
