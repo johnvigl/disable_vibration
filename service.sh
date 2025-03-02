@@ -6,11 +6,13 @@ MODDIR=${0%/*}
 # Function to disable vibration
 disable_vibration() {
     stop vendor.vibrator-1-0
+    stop vendor.qti.vibrator
 }
 
 # Function to re-enable vibration
 enable_vibration() {
     start vendor.vibrator-1-0
+    start vendor.qti.vibrator
 }
 
 vibration_disabled=0
