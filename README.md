@@ -2,7 +2,7 @@
 
 This Magisk module disables vibration for selected apps when they are in the foreground.
 The .zip file included in the above files can be added as a Magisk module. 
-Tested in Android 10
+Tested in Android 10 and Android 13 with Qualcomm devices.
 
 
 ## Configuration
