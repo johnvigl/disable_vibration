@@ -31,12 +31,17 @@ while true; do
     load_app_list
 
     # Get the current foreground app
-    foreground_app=$(dumpsys activity activities | grep mResumedActivity | awk '{print $4}' | cut -d '/' -f 1)
+    foreground_app_A10=$(dumpsys activity activities | grep mResumedActivity | awk '{print $4}' | cut -d '/' -f 1)
+    foreground_app_A13=$(dumpsys window | grep -E 'mCurrentFocus|mFocusedApp' | awk -F'[ /]' '/mFocusedApp/ {print $8}')
 
     # Check if the foreground app matches any app in the list
     match_found=0
     for app in $APP_LIST; do
-        if [ "$foreground_app" == "$app" ]; then
+        if [ "$foreground_app_A10" == "$app" ]; then
+            match_found=1
+            break
+        fi
+        if [ "$foreground_app_A13" == "$app" ]; then
             match_found=1
             break
         fi
@@ -57,4 +62,4 @@ while true; do
 
     # Sleep for 5 seconds before checking again
     sleep 5
-done 
+done
