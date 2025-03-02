@@ -32,7 +32,7 @@ while true; do
 
     # Get the current foreground app
     foreground_app_A10=$(dumpsys activity activities | grep mResumedActivity | awk '{print $4}' | cut -d '/' -f 1)
-    foreground_app_A13=$(dumpsys window | grep -E 'mCurrentFocus|mFocusedApp' | awk -F'[ /]' '/mFocusedApp/ {print $8}')
+    foreground_app_A13=$(dumpsys window | grep -E 'mCurrentFocus|mFocusedApp' | awk -F'[ /]' '/mFocusedApp/ {print $5}')
 
     # Check if the foreground app matches any app in the list
     match_found=0
